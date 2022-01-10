@@ -14,5 +14,16 @@ class LearningController extends AbstractController
         return $this->render('learning/index.html.twig', [
             'controller_name' => 'LearningController',
         ]);
+
+
+    }
+    #[Route('/', name: 'homepage')]
+    public function aboutMe(): Response
+    {
+        return $this->render('learning/index.html.twig', [
+            'name' => 'BeCode',
+        ]);
+
+
     }
 }
