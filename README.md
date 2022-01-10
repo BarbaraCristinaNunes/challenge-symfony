@@ -75,3 +75,13 @@ Into this repository I required apache/pack using the command:
 And I created a symfony structre using the command:
 
 >composer create-project symfony/website-skeleton symfony-mcv
+
+### 4. Use the MVC
+When I created my project Symfone made a folder with a MVC structure with folde templates, where are my views. In folder src I have folder Controller, to keep my controllers and Entity, to keep my models.
+
+### 5. Add some functionality
+
+I created a new view called showMyName, where I did a form with a path, an input to get name and a button.
+In LearningController I created the method showMyName() to execute the functionality when a user clik on the button.
+
+Now I can't see my page on browser. I don't know why yet, I am tring to fix this problem.
