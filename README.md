@@ -82,6 +82,6 @@ When I created my project Symfone made a folder with a MVC structure with folde 
 ### 5. Add some functionality
 
 I created a new view called showMyName, where I did a form with a path, an input to get name and a button.
-In LearningController I created the method showMyName() to execute the functionality when a user clik on the button.
+In LearningController I created the method showName() to execute the functionality when a user clik on the button.
 
-Now I can't see my page on browser. I don't know why yet but since I wrote functon showMyName it hasn't worked. I am tring to fix this problem.
+Now I can't see my page on browser. I don't know why yet but since I wrote functon showName it hasn't worked. I am tring to fix this problem.
