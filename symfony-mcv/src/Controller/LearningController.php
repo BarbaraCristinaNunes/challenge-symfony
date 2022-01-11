@@ -35,14 +35,11 @@ class LearningController extends AbstractController
     {
         if($session->get('name')){
             $name = $session->get('name');
-            $test = 'deu certo';
         }else{
             $name = "Unknown";
-            $test = 'ola';
         }        
         return $this->render('learning/showMyName.html.twig', [
             'name' => $name,
-            'test' => $test
         ]);
 
     }
