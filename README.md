@@ -85,3 +85,21 @@ I created a new view called showMyName, where I did a form with a path, an input
 In LearningController I created the method showName() to execute the functionality when a user clik on the button.
 
 Now I can't see my page on browser. I don't know why yet but since I wrote functon showName it hasn't worked. I am tring to fix this problem.
+
+<B>NOTE: Yesterday my project was not wotking because I was runing it localy. Now I am using web server link and my path is working! </B>
+
+> Use symfony server:start to start web server
+
+I created the method changeMyName() where I set input's value in a session. To get input's value I used the following Request component. A Request object holds information about the client request. This information can be accessed via several public properties. I uses method POST in my form so I used <b> request</b>: equivalent of $_POST and method get('input's name').
+So I have this => <b> $name = $request->request->get('name'); </b>
+
+> [use Symfony\Component\HttpFoundation\Request](https://symfony.com/doc/current/components/http_foundation.html)
+
+To save input's value in a session I used Session component and the method set('name', $name).
+
+> [use Symfony\Component\HttpFoundation\Session\Session](https://symfony.com/doc/current/components/http_foundation/sessions.html);
+
+To redirect the user to homepage after get and save input's value I used RedirectResponse component.
+
+> [use Symfony\Component\HttpFoundation\RedirectResponse](https://symfony.com/doc/current/components/http_foundation.html);
+
