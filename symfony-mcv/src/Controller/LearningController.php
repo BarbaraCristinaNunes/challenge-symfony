@@ -17,7 +17,7 @@ class LearningController extends AbstractController
 
 
     }
-    #[Route('/', name: 'homepage')]
+    #[Route('/about-me', name: 'homepage')]
     public function aboutMe(): Response
     {
         return $this->render('learning/index.html.twig', [
@@ -26,18 +26,18 @@ class LearningController extends AbstractController
 
 
     }
-    // #[Route('/showName', name: 'homepage')]
-    // public function showName(): Response
-    // {
-    //     if(isset($_POST['btn']) && isset($_POST['name'])){
-    //         $name = $_POST['name'];
-    //     }else{
-    //         $name = "";
-    //     }
-    //     return $this->render('learning/index.html.twig', [
-    //         'name' => 'BeCode',
-    //     ]);
+    #[Route('/homepage', name: 'homepage')]
+    public function showName(): Response
+    {
+        // if(isset($_POST['btn']) && isset($_POST['name'])){
+        //     $name = $_POST['name'];
+        // }else{
+            $name = "Unknown";
+        // }
+        return $this->render('learning/showMyName.html.twig', [
+            'name' => $name,
+        ]);
 
 
-    // }
+    }
 }
