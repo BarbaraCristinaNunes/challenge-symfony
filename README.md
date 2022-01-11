@@ -90,7 +90,7 @@ Now I can't see my page on browser. I don't know why yet but since I wrote funct
 
 > Use symfony server:start to start web server
 
-I created the method changeMyName() where I set input's value in a session. To get input's value I used the following Request component. A Request object holds information about the client request. This information can be accessed via several public properties. I uses method POST in my form so I used <b> request</b>: equivalent of $_POST and method get('input's name').
+I created the method changeMyName() where I set input's value in a session. To get input's value I used Request component. A Request object holds information about the client request. This information can be accessed via several public properties. I uses method POST in my form so I used <b> request</b>: equivalent of $_POST and method get('input's name').
 So I have this => <b> $name = $request->request->get('name'); </b>
 
 > [use Symfony\Component\HttpFoundation\Request](https://symfony.com/doc/current/components/http_foundation.html)
@@ -103,3 +103,8 @@ To redirect the user to homepage after get and save input's value I used Redirec
 
 > [use Symfony\Component\HttpFoundation\RedirectResponse](https://symfony.com/doc/current/components/http_foundation.html);
 
+### 5. Add links on pages
+
+I added the following line to create links in homepage (showMyName.html.twig) and about me page (index.html.twig). Read more abotu this method [here](https://symfony.com/doc/current/templates.html#templates-link-to-pages)
+
+> '<a href="{{ path('blog_index') }}"'>'Homepage '<'/a>'
