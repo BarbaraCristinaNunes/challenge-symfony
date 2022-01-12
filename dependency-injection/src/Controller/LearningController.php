@@ -26,8 +26,11 @@ class LearningController extends AbstractController
     #[Route('/homepage', name: 'homepage')]
     public function showMessage(): Response
     {
+        $message = '';
+
         return $this->render('learning/Homepage.html.twig', [
             'controller_name' => 'LearningController',
+            'message' => $message,
         ]);
     }
     #[Route('/showMessage', name: 'showMessage')]
@@ -37,17 +40,24 @@ class LearningController extends AbstractController
         // var_dump($request->request->get('changeMessage'));
         $message = $request->request->get('message');
         $method = $request->request->get('changeMessage');
+        $showMessage = '';
 
         if($method == 'ChangeSpacesToDashes'){
             $master = new Master(new Logger(), new ChangeSpacesToDashes());
             $master->transformMessage($message);
+            $showMessage = $master->getMessage();
         }else{
             $master = new Master(new Logger(), new CaptalizesWords());
             $master->transformMessage($message);
+            $showMessage = $master->getMessage();
         }
 
+        return $this->render('learning/Homepage.html.twig', [
+            'controller_name' => 'LearningController',
+            'message' => $showMessage,
+        ]);
         
         
-        return $this->redirectToRoute('homepage');
+        // return $this->redirectToRoute('homepage');
     }
 }
