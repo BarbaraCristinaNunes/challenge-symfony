@@ -46,4 +46,8 @@ In short: When two objects have the same interface, they are functionally interc
 
 I can write the message in log.info file, but my code rewrite the messages. So in this moment I can't save one message after another. <b> I have to resolve this problem yet </b>
 
+<b> ==> My code was rewritng my messages because I forgot to write FILE_APPEND in method file_put_contents() from Logger.php </b>
+
 I don't show the messages on brouser yet also!
+
+<b> ==> Now I can show the message on browser because I created a method caled getMessage() in Master class. This method return the message after it is tranformed and I return this message as a variable in method changeMessage() from controller when I return a render where I call homepage.
