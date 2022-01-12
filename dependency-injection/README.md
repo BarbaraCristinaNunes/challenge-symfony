@@ -21,7 +21,9 @@ Make a logger class which logs messages in a file called "log.info". <b> OK </b>
 Now make a "master" class which accepts a user input (simple form with 1 field). It should do the following. <b> OK </b>
 
 I log the message <b> OK </b>
+
 I echo it to the screen using the weird capitalization <b> OK </b>
+
 Reuse the classes you made inside the master class, but you should not use the keyword "new" inside the master class. Pass it to the constructor. OK
 
 You can execute this master class in a simple controller. <b> OK </b>
