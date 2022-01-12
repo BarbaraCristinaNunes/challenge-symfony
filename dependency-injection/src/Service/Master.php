@@ -20,10 +20,13 @@ class Master
     public function transformMessage(string $message){
         $this->message = $this->transform->transform($message);
         $this->logMessage($this->message);
-        return $this->message;
     }
 
     public function logMessage($message){
         $this->log->logMessage($message);
+    }
+
+    public function getMessage(){
+        return $this->message;
     }
 }
