@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use App\Entity\Time;
 
 class LearningController extends AbstractController
 {
@@ -30,8 +31,15 @@ class LearningController extends AbstractController
             $response = $this->forward('App\Controller\LearningController::showName');
             return $response;
         }
+        $america = date("d-m-Y");
+        $europe = date("m-d-Y");
+        $chinaJapan = date("Y-m-d");
+
         return $this->render('learning/index.html.twig', [
             'name' => $name,
+            'americaDate' => $america,
+            'europeDate' => $europe,
+            'chinaJapandate' => $chinaJapan
         ]);
 
 
