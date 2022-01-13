@@ -129,27 +129,15 @@ Use the MVC Routing exercise you created previously. If yours was unstable, ask 
 - Inside the menu block add 2 links to the homepage and the about me page. <b>OK</b>
 
 ### About me
-Let add some content to the new left menu that only appears on the about-me page.
-Show the current date in 3 different formats in the left menu, but only pass a `DateTime` object once trough your controller.
-Because your Controller is in a namespace don't forget to import the `DateTime` class!
+Added some content to the new left menu that only appears on the about-me page.
+I show the current date in 3 different formats in the left menu, but only pass a `DateTime` object once trough your controller. <b>OK</b>
+Imported the `DateTime` class! <b>OK</b>
 
-- Europe: DMY
-- America: MDY
-- China & Japan: YMD
+- Europe: DMY <b>OK</b>
+- America: MDY <b>OK</b>
+- China & Japan: YMD <b>OK</b>
 
-To do this you will need to use the [format_date](https://twig.symfony.com/doc/3.x/filters/format_date.html) filter.
-Filters are really flexible, small modifiers you can assign to variables to change their appearance.
-
-You will need a custom pattern for this, one example of this would be `{{ date|format_date(pattern="J/M/d") }}`.
-
-In order to make this work you might need to install the following extensions:
-
-`sudo apt-get install php-http`
-`sudo apt-get install php-intl`
-`composer require twig/intl-extra`
-
-Make sure the 2 links that are as a default in the menu block still appear above your dates, you will need to read about
-[extending a block](https://twig.symfony.com/doc/3.x/tags/extends.html#child-template) in order to pull that off.
+To do this I need to use the [format_date](https://twig.symfony.com/doc/3.x/filters/format_date.html) filter.
 
 ### Home page (show my name)
 Now we add some extra functionality on the homepage, in the menu below the default navigation.
