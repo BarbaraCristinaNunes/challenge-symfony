@@ -108,3 +108,13 @@ To redirect the user to homepage after get and save input's value I used Redirec
 I added the following line to create links in homepage (showMyName.html.twig) and about me page (index.html.twig). Read more abotu this method [here](https://symfony.com/doc/current/templates.html#templates-link-to-pages)
 
 > '<a href="{{ path('blog_index') }}"'>'Homepage '<'/a>'
+
+----
+
+# challenge-twig
+
+I had prolem to start this new exercise because my serve was been used in another project and I didn't know how to stop this. 
+
+I found ths following code and it stoped my server. So I could continue with my exercise.
+
+>symfony server:stop
