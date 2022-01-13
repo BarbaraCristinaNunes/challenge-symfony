@@ -125,12 +125,14 @@ Use the MVC Routing exercise you created previously. If yours was unstable, ask 
 - Add a <footer>&copy; Becode</footer> in the base template file, this footer should appear on all pages!<b>OK</b>
 
 ### Menu
-- in the base.html.twig file add a menu block surrounded by an ``<aside>`` tag (make it appear to the left with css).
+- in the base.html.twig file add a menu block surrounded by an ``<aside>`` tag (make it appear to the left with css).<b>OK</b>
+
 - Inside the menu block add 2 links to the homepage and the about me page. <b>OK</b>
 
 ### About me
 Added some content to the new left menu that only appears on the about-me page.
 I show the current date in 3 different formats in the left menu, but only pass a `DateTime` object once trough your controller. <b>OK</b>
+
 Imported the `DateTime` class! <b>OK</b>
 
 - Europe: DMY <b>OK</b>
