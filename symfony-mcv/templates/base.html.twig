@@ -14,7 +14,15 @@
         {% endblock %}
     </head>
     <body>
+        <aside>
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="{{ path('homepage') }}">Homepage</a></li>
+                <li><a href="{{ path('about-becode') }}">About Me</a></li>
+            </ul>
+        </aside>
         {% block body %}{% endblock %}
+        
     </body>
     {% block footer %}
         <footer>
