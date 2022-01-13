@@ -9,11 +9,10 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{name}}!</h1>
+    <h1>Hello {{name|title }}!</h1>
     <form method="post" action="changeMyName">
     <input name="name" type="text">
     <input type="submit" name="btn">
     </fomr>
 </div>
-<a href="{{ path('about-becode') }}">About Me</a>
 {% endblock %}
